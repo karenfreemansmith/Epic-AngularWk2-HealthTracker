@@ -16,9 +16,11 @@ import { Food } from './food.model';
 
   </div>
   <div *ngFor="let currentFood of childFoodList | badfood: badFoodSelection " >
-    <h4 (click)="selectFood(currentFood)" >
+    <h3>
       {{ currentFood.food }}
       ({{ currentFood.calories }} calories)
+    </h3>
+    <h4>
       {{ currentFood.datetime | date:'longDate' }}
       @ {{ currentFood.datetime | date:'shortTime' }}
     </h4>
@@ -29,6 +31,7 @@ import { Food } from './food.model';
       (Calculated calories: {{ currentFood.calculatedCalories() }})
     </p>
     <p><strong>Comments: </strong> {{ currentFood.comment }}</p>
+    <button (click)="selectFood(currentFood)" class="btn form-control">Click HERE to edit food</button>
   </div>
   `
 })

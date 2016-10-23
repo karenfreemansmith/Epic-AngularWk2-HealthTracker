@@ -11,12 +11,10 @@ Epicodus JavaScript Week 2 Individual Project.
 * Add food by submitting a form with food name, calories and details.
 * View a list of foods I have logged. *(Optionally, can display a list of pre-entered food by clicking a button - to test filters)*
 * Select filter to view
-  * all foods, high-calorie foods (more than 500 calories)
-  * high-carb foods (more than 70% carbs)
-  * high-fat foods (more than 30% fat)
-  * low-protien foods (less than 10% protein).
+  * all foods,
+  * high-calorie foods (more than 500 calories)
+  * low-calorie foods (less than 500 calories)
 * Click a food to edit its name, details or calories.
-* Highlights calories if the macro nutrients and calories don't add up close to the same.
 * Styles Sass compiled with Gulp tasks.
 * Shows date and time when food was entered.
 
