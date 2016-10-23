@@ -14,9 +14,9 @@ var AddFoodComponent = (function () {
     function AddFoodComponent() {
         this.addFoodSender = new core_1.EventEmitter();
     }
-    AddFoodComponent.prototype.addClicked = function (food, calories, protein, carbs, fat) {
+    AddFoodComponent.prototype.addClicked = function (food, calories, protein, carbs, fat, comment) {
         if ((food !== '') && (calories > 0)) {
-            var newFoodToAdd = new food_model_1.Food(food, calories, protein, carbs, fat);
+            var newFoodToAdd = new food_model_1.Food(food, calories, protein, carbs, fat, comment);
             this.addFoodSender.emit(newFoodToAdd);
         }
         else {
@@ -34,7 +34,7 @@ var AddFoodComponent = (function () {
     AddFoodComponent = __decorate([
         core_1.Component({
             selector: "add-food",
-            template: "\n  <div *ngIf=\"childSelectedFood===null\" class=\"row\">\n    <h3>Add Food:</h3>\n    <div class=\"form-group col-xs-9\">\n      <label>Enter Food Description: </label>\n      <input #newFood class=\"form-control\">\n    </div>\n    <div class=\"form-group col-xs-3\">\n      <label>Calories: </label>\n      <input #newCalories class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Protein<br>(in grams): </label>\n      <input #newProtein class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Carbs<br>(in grams): </label>\n      <input #newCarbs class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Fat<br>(in grams): </label>\n      <input #newFat class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-12\">\n    <button (click)=\"\n      addClicked(newFood.value, newCalories.value, newProtein.value, newFat.value, newCarbs.value);\n      newFood.value='';\n      newCalories.value=0;\n      newProtein.value=0;\n      newCarbs.value=0;\n      newFat.value=0;\n    \" class=\"btn form-control\">Add Food</button>\n    </div>\n  </div>\n  "
+            template: "\n  <div *ngIf=\"childSelectedFood===null\" class=\"row\">\n    <h3>Add Food:</h3>\n    <div class=\"form-group col-xs-9\">\n      <label>Enter Food Description: </label>\n      <input #newFood class=\"form-control\">\n    </div>\n    <div class=\"form-group col-xs-3\">\n      <label>Calories: </label>\n      <input #newCalories class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Protein<br>(in grams): </label>\n      <input #newProtein class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Carbs<br>(in grams): </label>\n      <input #newCarbs class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-4\">\n      <label>Fat<br>(in grams): </label>\n      <input #newFat class=\"form-control\" type=\"number\">\n    </div>\n    <div class=\"form-group col-xs-12\">\n      <label>Comment: </label>\n      <input #newComment class=\"form-control\">\n    </div>\n    <div class=\"form-group col-xs-12\">\n    <button (click)=\"\n      addClicked(newFood.value, newCalories.value, newProtein.value, newFat.value, newCarbs.value, newComment.value);\n      newFood.value='';\n      newCalories.value=0;\n      newProtein.value=0;\n      newCarbs.value=0;\n      newFat.value=0;\n      newComment.value='';\n    \" class=\"btn form-control\">Add Food</button>\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AddFoodComponent);

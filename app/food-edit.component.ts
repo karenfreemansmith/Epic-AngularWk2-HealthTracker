@@ -27,6 +27,10 @@ import { Food } from './food.model';
       <input [(ngModel)]="childSelectedFood.fat" class="form-control" type="number" min=0>
     </div>
     <div class="form-group col-xs-12">
+      <label>Comment: </label>
+      <input [(ngModel)]="childSelectedFood.comment" class="form-control">
+    </div>
+    <div class="form-group col-xs-12">
     <button (click)="updateClicked()" class="btn form-control">Done Editing</button>
     </div>
   </div>

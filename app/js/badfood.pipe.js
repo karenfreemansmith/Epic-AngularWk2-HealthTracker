@@ -22,25 +22,9 @@ var BadFoodPipe = (function () {
             }
             return output;
         }
-        else if (badFood === "high fat") {
+        else if (badFood === "low calorie") {
             for (var i = 0; i < input.length; i++) {
-                if (input[i].highFat()) {
-                    output.push(input[i]);
-                }
-            }
-            return output;
-        }
-        else if (badFood === "high carbs") {
-            for (var i = 0; i < input.length; i++) {
-                if (input[i].highCarb()) {
-                    output.push(input[i]);
-                }
-            }
-            return output;
-        }
-        else if (badFood === "low protein") {
-            for (var i = 0; i < input.length; i++) {
-                if (input[i].lowProtein()) {
+                if (input[i].lowCal()) {
                     output.push(input[i]);
                 }
             }
